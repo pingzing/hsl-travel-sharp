@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace HslSharp.Helpers
+namespace HslTravelSharp.Helpers
 {
     internal static class ConversionUtil
     {

@@ -1,7 +1,7 @@
-﻿using HslSharp.Helpers;
+﻿using HslTravelSharp.Helpers;
 using System;
 
-namespace HslSharp.Models
+namespace HslTravelSharp.Models
 {
     public class SingleTicket
     {

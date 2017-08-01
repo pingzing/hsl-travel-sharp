@@ -1,4 +1,4 @@
-﻿namespace HslSharp.Models
+﻿namespace HslTravelSharp.Models
 {
     public class ValidityLength
     {

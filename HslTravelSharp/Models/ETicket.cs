@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HslSharp.Models
+namespace HslTravelSharp.Models
 {
     public class ETicket
     {

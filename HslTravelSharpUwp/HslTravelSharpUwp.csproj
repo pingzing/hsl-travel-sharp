@@ -7,8 +7,8 @@
     <ProjectGuid>{D7BDEF43-0F2D-4B60-B128-9698E233F285}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HslSharpUwp</RootNamespace>
-    <AssemblyName>HslSharpUwp</AssemblyName>
+    <RootNamespace>HslTravelSharpUwp</RootNamespace>
+    <AssemblyName>HslTravelSharpUwp</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.10240.0</TargetPlatformVersion>
@@ -109,12 +109,12 @@
   <ItemGroup>
     <Compile Include="CardOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\HslSharpUwp.rd.xml" />
+    <EmbeddedResource Include="Properties\HslTravelSharpUwp.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HslSharp\HslSharp.csproj">
+    <ProjectReference Include="..\HslTravelSharp\HslTravelSharp.csproj">
       <Project>{1e0be6f7-8689-44d4-8edd-2d53a90910b4}</Project>
-      <Name>HslSharp</Name>
+      <Name>HslTravelSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

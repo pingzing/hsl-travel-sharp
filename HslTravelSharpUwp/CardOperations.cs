@@ -1,11 +1,11 @@
-﻿using HslSharp.Models;
+﻿using HslTravelSharp.Models;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Devices.SmartCards;
 
-namespace HslSharpUwp
+namespace HslTravelSharpUwp
 {
     public class CardOperations
     {
