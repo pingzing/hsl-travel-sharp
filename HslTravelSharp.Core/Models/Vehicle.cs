@@ -1,4 +1,4 @@
-﻿namespace HslTravelSharp.Models
+﻿namespace HslTravelSharp.Core.Models
 {
     public enum Vehicle : byte
     {

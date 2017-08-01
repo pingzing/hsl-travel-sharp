@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HslTravelSharpUwp", "HslTravelSharpUwp\HslTravelSharpUwp.csproj", "{D7BDEF43-0F2D-4B60-B128-9698E233F285}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HslTravelSharp.Uwp", "HslTravelSharp.Uwp\HslTravelSharpUwp.csproj", "{D7BDEF43-0F2D-4B60-B128-9698E233F285}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HslTravelSharp", "HslTravelSharp\HslTravelSharp.csproj", "{1E0BE6F7-8689-44D4-8EDD-2D53A90910B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HslTravelSharp.Core", "HslTravelSharp.Core\HslTravelSharp.Core.csproj", "{1E0BE6F7-8689-44D4-8EDD-2D53A90910B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

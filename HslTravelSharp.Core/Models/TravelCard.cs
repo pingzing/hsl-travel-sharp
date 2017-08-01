@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HslTravelSharp.Models
+namespace HslTravelSharp.Core.Models
 {
     public class TravelCard
     {        

@@ -1,7 +1,7 @@
-﻿using HslTravelSharp.Helpers;
+﻿using HslTravelSharp.Core.Helpers;
 using System;
 
-namespace HslTravelSharp.Models
+namespace HslTravelSharp.Core.Models
 {
     public class RawTravelCard
     {        

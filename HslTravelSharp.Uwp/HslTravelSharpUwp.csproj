@@ -112,9 +112,9 @@
     <EmbeddedResource Include="Properties\HslTravelSharpUwp.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HslTravelSharp\HslTravelSharp.csproj">
+    <ProjectReference Include="..\HslTravelSharp.Core\HslTravelSharp.Core.csproj">
       <Project>{1e0be6f7-8689-44d4-8edd-2d53a90910b4}</Project>
-      <Name>HslTravelSharp</Name>
+      <Name>HslTravelSharp.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

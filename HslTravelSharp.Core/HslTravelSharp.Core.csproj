@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyName>HslTravelSharp.Core</AssemblyName>
+    <RootNamespace>HslTravelSharp.Core</RootNamespace>
+    <PackageId>HslTravelSharp.Core</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Neil_McAlister</Authors>
+    <Description>A .NET Standard C# libray for reading data from an HSL Travel Card.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageTags>hsl travel travel-card nfc finalnd helsinki transit</PackageTags>
+    <PackageLicenseUrl>https://github.com/pingzing/hsl-travel-sharp/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/pingzing/hsl-travel-sharp</PackageProjectUrl>
+    <Copyright>Copyright 2017 (c) Neil McAlister</Copyright>
+    <RepositoryUrl>https://github.com/pingzing/hsl-travel-sharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">    
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.0\HslTravelSharp.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

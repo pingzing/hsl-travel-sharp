@@ -1,7 +1,7 @@
-﻿using HslTravelSharp.Helpers;
+﻿using HslTravelSharp.Core.Helpers;
 using System;
 
-namespace HslTravelSharp.Models
+namespace HslTravelSharp.Core.Models
 {
     /// <summary>
     /// Represents a single ticket data that is used both in HSL single tickets and in HSL travel card's value tickets.

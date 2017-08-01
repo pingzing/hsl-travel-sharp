@@ -1,4 +1,4 @@
-﻿using HslTravelSharp.Models;
+﻿using HslTravelSharp.Core.Models;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;

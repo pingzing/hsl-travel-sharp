@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HslTravelSharp.Models
+namespace HslTravelSharp.Core.Models
 {
     /// <summary>
     /// The History class represents one history record from the History file. History file holds up to 7 records of transaction history.
