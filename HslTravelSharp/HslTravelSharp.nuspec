@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>HSLTravelSharp</id>
+    <version>1.0.0</version>
+    <title>HSLTravelSharp</title>
+    <authors>Neil McAlister</authors>
+    <owners>Neil McAlister</owners>
+    <licenseUrl>https://github.com/pingzing/hsl-travel-sharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/pingzing/hsl-travel-sharp</projectUrl>    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET Standard C# libray for reading data from an HSL Travel Card.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright Neil McAlister 2017</copyright>
+    <tags>hsl travel nfc card-reader helsinki finland travel-card</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard1.0\HslTravelSharp.dll" target="lib\netstandard1.0\HslTravelSharp.dll"/>
+    <file src="bin\Release\netstandard1.0\HslTravelSharp.xml" target="lib\netstandard1.0\HslTravelSharp.xml"/>
+    <file src="bin\Release\netstandard1.0\HslTravelSharp.pdb" target="lib\netstandard1.0\HslTravelSharp.pdb"/>
+  </files>
+</package>
