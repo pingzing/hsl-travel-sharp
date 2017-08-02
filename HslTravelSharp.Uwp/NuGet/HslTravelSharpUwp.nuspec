@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>HslTravelSharp.Uwp</id>
+    <version>1.0.0</version>
+    <title>HslTravelSharp.UWP</title>
+    <authors>Neil McAlister</authors>
+    <owners>Neil McAlister</owners>
+    <licenseUrl>https://github.com/pingzing/hsl-travel-sharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/pingzing/hsl-travel-sharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A C# UWP Class Library for reading data from an HSL Travel Card.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2017 (c) Neil McAlister</copyright>
+    <tags>hsl travel travel-card nfc finalnd helsinki transit</tags>
+    <dependencies>      
+      <group targetFramework="uap10.0">
+        <dependency id="HslTravelSharp.Core" version="(,2.0)" />
+        <dependency id="System.Diagnostics.Debug" version="4.3.0" />
+        <dependency id="System.Linq" version="4.3.0" />
+        <dependency id="System.Runtime" version="4.3.0" />
+        <dependency id="System.Runtime.Extensions" version="4.3.0" />
+        <dependency id="System.Runtime.WindowsRuntime" version="4.3.0" />
+        <dependency id="System.Threading.Tasks" version="4.3.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\bin\Release\HslTravelSharpUwp**" target="lib\uap10.0"/>
+  </files>
+</package>
