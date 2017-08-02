@@ -8,6 +8,9 @@ using Windows.Devices.SmartCards;
 
 namespace HslTravelSharpUwp
 {
+    /// <summary>
+    /// Basic operations for interacting with an HSL Travel Card.
+    /// </summary>
     public class CardOperations
     {        
         /// <summary>

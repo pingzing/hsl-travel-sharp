@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>HslTravelSharp.Uwp</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>HslTravelSharp.UWP</title>
     <authors>Neil McAlister</authors>
     <owners>Neil McAlister</owners>
@@ -15,7 +15,7 @@
     <tags>hsl travel travel-card nfc finalnd helsinki transit</tags>
     <dependencies>      
       <group targetFramework="uap10.0">
-        <dependency id="HslTravelSharp.Core" version="(,2.0)" />
+        <dependency id="HslTravelSharp.Core" version="[1.0.2 ,2.0)" />
         <dependency id="System.Diagnostics.Debug" version="4.3.0" />
         <dependency id="System.Linq" version="4.3.0" />
         <dependency id="System.Runtime" version="4.3.0" />
