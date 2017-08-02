@@ -5,7 +5,16 @@
     /// </summary>
     public enum BoardingDirection : byte
     {
+        /// <summary>
+        /// Indicates that at the time of boarding, the transit medium 
+        /// was headed toward the end of its route.
+        /// </summary>
         TowardEnd,
+
+        /// <summary>
+        /// Indicates that at the time of boarding, the transit medium 
+        /// was headed toward the start of its route.
+        /// </summary>
         TowardStart
     }
 }

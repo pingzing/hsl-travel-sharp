@@ -1,5 +1,8 @@
 ﻿namespace HslTravelSharp.Core.Models
 {
+    /// <summary>
+    /// Indicates how a <see cref="ValidityLength"/> should be interpreted.
+    /// </summary>
     public enum ValidityLengthType : byte
     {
         Minutes = 0,

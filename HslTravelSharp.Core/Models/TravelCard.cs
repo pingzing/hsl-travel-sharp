@@ -3,6 +3,11 @@ using System.Collections.Generic;
 
 namespace HslTravelSharp.Core.Models
 {
+    /// <summary>
+    /// A friendly representation of the values contained on a travel card.
+    /// A travel card can contain two "period" (aka season pass) products:
+    /// Period1, and Period2. Usually, they are the two most-recently purchased products.
+    /// </summary>
     public class TravelCard
     {        
         public RawTravelCard RawValues { get; private set; }
@@ -20,8 +25,19 @@ namespace HslTravelSharp.Core.Models
         public ValidityArea ValidityArea2 { get; private set; }
 
         // Season pass previous boarding info
+        /// <summary>
+        /// The date of the most recent boarding.
+        /// </summary>
         public DateTimeOffset LastBoardingDate => RawValues.BoardingDate;
+
+        /// <summary>
+        /// The ID of the vehicle boarded at the most recent boarding.
+        /// </summary>
         public ushort LastBoardingVehicleId => RawValues.BoardingVehicle;
+
+        /// <summary>
+        /// Indicator of how to interpret <see cref="LastBoardingLocationNumber"/>.
+        /// </summary>
         public BoardingNumberLocationType LastBoardingType => (BoardingNumberLocationType)RawValues.BoardingLocationNumType;
         /// <summary>
         /// Number of the last boarding location. This value should be interpreted 
@@ -29,7 +45,15 @@ namespace HslTravelSharp.Core.Models
         /// train number or platform number.
         /// </summary>
         public ushort LastBoardingLocationNumber => RawValues.BoardingLocationNum;
+
+        /// <summary>
+        /// The direction the method of transit was heading when it was boarded at the most recent boarding.
+        /// </summary>
         public BoardingDirection LastBoardingDirection => (BoardingDirection)RawValues.BoardingDirection;
+
+        /// <summary>
+        /// The zone which the most recent boarding ticket was purchased for.
+        /// </summary>
         public ValidityArea LastBoardingArea { get; private set; }
 
         // Stored value (i.e. money) info

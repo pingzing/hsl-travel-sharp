@@ -3,6 +3,9 @@ using System;
 
 namespace HslTravelSharp.Core.Models
 {
+    /// <summary>
+    /// Represents a single ticket card.
+    /// </summary>
     public class SingleTicket
     {
         public byte ApplicationVersion { get; private set; }

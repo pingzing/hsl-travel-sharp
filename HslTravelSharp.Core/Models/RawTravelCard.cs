@@ -76,15 +76,6 @@ namespace HslTravelSharp.Core.Models
         public RawETicket RawTicket { get; private set; }
 
         /// <summary>
-        /// Creates a TravelCard and immediately sets its status.
-        /// </summary>
-        /// <param name="status"></param>
-        public RawTravelCard(CardStatus status)
-        {
-            Status = status;
-        }
-
-        /// <summary>
         /// Creates a travel card object with the given byte arrays.
         /// </summary>       
         public RawTravelCard(byte[] appInfoBytes, byte[] periodPassBytes, byte[] storedValueBytes, byte[] eTicketBytes, byte[] historyBytes)

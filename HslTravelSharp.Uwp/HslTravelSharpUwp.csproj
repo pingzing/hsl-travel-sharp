@@ -104,18 +104,15 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="HslTravelSharpUwp.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\HslTravelSharpUwp.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HslTravelSharp.Core\HslTravelSharp.Core.csproj">
-      <Project>{1e0be6f7-8689-44d4-8edd-2d53a90910b4}</Project>
-      <Name>HslTravelSharp.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

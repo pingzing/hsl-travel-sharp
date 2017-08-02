@@ -2,6 +2,9 @@
 
 namespace HslTravelSharp.Core.Models
 {
+    /// <summary>
+    /// A friendly representation of a single, electronic value ticket.
+    /// </summary>
     public class ETicket
     {
         public RawETicket RawValues { get; private set; }

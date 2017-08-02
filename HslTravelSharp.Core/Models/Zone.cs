@@ -1,5 +1,8 @@
 ﻿namespace HslTravelSharp.Core.Models
 {
+    /// <summary>
+    /// An HSL fare zone.
+    /// </summary>
     public enum Zone : byte
     {
         NotDefined      = 0,

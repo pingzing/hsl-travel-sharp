@@ -1,5 +1,8 @@
 ﻿namespace HslTravelSharp.Core.Models
 {
+    /// <summary>
+    /// An HSL vehicle type.
+    /// </summary>
     public enum Vehicle : byte
     {
         NotDefined  = 0,
