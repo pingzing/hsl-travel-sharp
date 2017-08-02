@@ -1,6 +1,8 @@
 # HSLTravelSharp
 A .NET Standard C# libray for reading data from an HSL Travel Card. A C# port of the [HSL Travel Card Java SDK](https://github.com/hsldevcom/hsl-card-java).
 
+Targets [.NET Standard 1.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) and up.
+
 The library is divided into two parts: Core and UWP.
 
 ## HslTravelSharp.Core
