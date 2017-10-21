@@ -13,6 +13,16 @@ namespace HslTravelSharp.Core.Models
         public byte PlatformType { get; private set; }
         public RawETicket ValueTicket { get; private set; }
 
+        /// <summary>
+        /// This constructor mostly exists as a convenience method for 
+        /// serializers like Json.NET. Using it directly
+        /// is not recommended.
+        /// </summary>
+        public SingleTicket()
+        {
+
+        }
+
         public SingleTicket(byte[] appInfoBytes, byte[] eTicketBytes)
         {
             ReadApplicationInfo(appInfoBytes);

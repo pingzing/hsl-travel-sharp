@@ -33,6 +33,16 @@
         /// </summary>
         public bool IsVehicle => AreaType == ValidityAreaType.Vehicle;
 
+        /// <summary>
+        /// This constructor mostly exists as a convenience method for 
+        /// serializers like Json.NET. Using it directly
+        /// is not recommended.
+        /// </summary>
+        public ValidityArea()
+        {
+
+        }
+
         internal ValidityArea(Zone validityZone)
         {
             AreaType = ValidityAreaType.Zone;

@@ -15,6 +15,16 @@
         /// </summary>
         public byte Length { get; set; }
 
+        /// <summary>
+        /// This constructor mostly exists as a convenience method for 
+        /// serializers like Json.NET. Using it directly
+        /// is not recommended.
+        /// </summary>
+        public ValidityLength()
+        {
+
+        }
+
         internal ValidityLength(ValidityLengthType type, byte length)
         {
             LengthType = type;

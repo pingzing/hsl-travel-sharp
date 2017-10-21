@@ -31,6 +31,16 @@ namespace HslTravelSharp.Core.Models
         public byte BoardingDirection { get; private set; }
         public byte BoardingArea { get; private set; }
 
+        /// <summary>
+        /// This constructor mostly exists as a convenience method for 
+        /// serializers like Json.NET. Using it directly
+        /// is not recommended.
+        /// </summary>
+        public RawETicket()
+        {
+
+        }
+
         public RawETicket(byte[] eTicketData, Boolean isSingleTicket)
         {            
             ProductCode = (ushort)((ushort)((eTicketData[0] & 0xFF) << 6) | ((eTicketData[1] & 0xFC) >> 2));

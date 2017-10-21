@@ -71,6 +71,20 @@ namespace HslTravelSharp.Core.Models
         /// </summary>
         public ETicket ValueTicket => RawValues.FriendlyTicket;
 
+        /// <summary>
+        /// This constructor mostly exists as a convenience method for 
+        /// serializers like Json.NET. Using it directly
+        /// is not recommended.
+        /// </summary>
+        public TravelCard()
+        {
+
+        }
+
+        /// <summary>
+        /// Creates a friendly Travel Card given a <see cref="RawTravelCard"/> object.
+        /// </summary>
+        /// <param name="rawCard"></param>
         public TravelCard(RawTravelCard rawCard)
         {
             RawValues = rawCard;

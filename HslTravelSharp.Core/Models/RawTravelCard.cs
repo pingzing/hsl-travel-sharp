@@ -76,6 +76,16 @@ namespace HslTravelSharp.Core.Models
         public RawETicket RawTicket { get; private set; }
 
         /// <summary>
+        /// This constructor mostly exists as a convenience method for 
+        /// serializers like Json.NET. Using it directly
+        /// is not recommended.
+        /// </summary>
+        public RawTravelCard()
+        {
+
+        }
+
+        /// <summary>
         /// Creates a travel card object with the given byte arrays.
         /// </summary>       
         public RawTravelCard(byte[] appInfoBytes, byte[] periodPassBytes, byte[] storedValueBytes, byte[] eTicketBytes, byte[] historyBytes)

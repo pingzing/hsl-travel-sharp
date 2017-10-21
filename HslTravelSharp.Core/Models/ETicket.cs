@@ -47,6 +47,16 @@ namespace HslTravelSharp.Core.Models
         public ValidityArea BoardingArea { get; private set; }
 
         /// <summary>
+        /// This constructor mostly exists as a convenience method for 
+        /// serializers like Json.NET. Using it directly
+        /// is not recommended.
+        /// </summary>
+        public ETicket()
+        {
+
+        }        
+
+        /// <summary>
         /// A friendly representation of the data contained on a given <see cref="RawETicket"/>.
         /// </summary>        
         public ETicket(RawETicket rawValues)
