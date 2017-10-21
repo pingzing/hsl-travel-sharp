@@ -15,7 +15,7 @@
         /// </summary>
         public ushort BoardingNumber { get; private set; }
         
-        internal BoardingLocationNumber(BoardingNumberLocationType numberType, ushort boardingNumber)
+        public BoardingLocationNumber(BoardingNumberLocationType numberType, ushort boardingNumber)
         {
             NumberType = numberType;
             BoardingNumber = boardingNumber;

@@ -7,13 +7,13 @@ namespace HslTravelSharp.Core.Models
     /// </summary>
     public class ETicket
     {
-        public RawETicket RawValues { get; private set; }
+        public RawETicket RawValues { get; set; }
 
         /// <summary>
         /// Whether or not this ticket was purchased at a child-rate fare.
         /// </summary>
         public bool IsChildTicket => RawValues.Child == 1;
-        public LanguageCode Language => (LanguageCode)RawValues.LanguageCode;        
+        public LanguageCode Language => (LanguageCode)RawValues?.LanguageCode;        
         public ValidityLength ValidityLength { get; private set; }
         public ValidityArea ValidityArea { get; private set; }
         public DateTimeOffset SaleDateTime => RawValues.SaleDate.AddMinutes(RawValues.SaleTime);
@@ -44,17 +44,7 @@ namespace HslTravelSharp.Core.Models
         public ushort BoardingVehicle => RawValues.BoardingVehicle;
         public BoardingLocationNumber BoardingLocationNumber { get; private set; }
         public BoardingDirection BoardingDirection => (BoardingDirection)RawValues.BoardingDirection;
-        public ValidityArea BoardingArea { get; private set; }
-
-        /// <summary>
-        /// This constructor mostly exists as a convenience method for 
-        /// serializers like Json.NET. Using it directly
-        /// is not recommended.
-        /// </summary>
-        public ETicket()
-        {
-
-        }        
+        public ValidityArea BoardingArea { get; private set; }      
 
         /// <summary>
         /// A friendly representation of the data contained on a given <see cref="RawETicket"/>.

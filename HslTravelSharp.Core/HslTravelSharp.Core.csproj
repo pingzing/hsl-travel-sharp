@@ -6,7 +6,7 @@
     <AssemblyName>HslTravelSharp.Core</AssemblyName>
     <RootNamespace>HslTravelSharp.Core</RootNamespace>
     <PackageId>HslTravelSharp.Core</PackageId>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.4</PackageVersion>
     <Authors>Neil McAlister</Authors>
     <Description>A .NET Standard C# library for reading data from an HSL Travel Card.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -19,7 +19,7 @@
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage />
     <Company>Neil McAlister</Company>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">    

@@ -43,13 +43,13 @@
 
         }
 
-        internal ValidityArea(Zone validityZone)
+        public ValidityArea(Zone validityZone)
         {
             AreaType = ValidityAreaType.Zone;
             ValidityZone = validityZone;            
         }
 
-        internal ValidityArea(Vehicle validityVehicle)
+        public ValidityArea(Vehicle validityVehicle)
         {
             AreaType = ValidityAreaType.Vehicle;
             ValidityVehicle = validityVehicle;

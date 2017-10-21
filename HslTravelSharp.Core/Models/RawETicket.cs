@@ -8,28 +8,28 @@ namespace HslTravelSharp.Core.Models
     /// </summary>
     public class RawETicket
     {
-        public ushort ProductCode { get; private set; }
-        public byte Child { get; private set; }
-        public byte LanguageCode { get; private set; }
-        public byte ValidityLengthType { get; private set; }
-        public byte ValidityLength { get; private set; }
-        public byte ValidityAreaType { get; private set; }
-        public byte ValidityArea { get; private set; }
-        public DateTimeOffset SaleDate { get; private set; }
-        public byte SaleTime { get; private set; }
-        public byte GroupSize { get; private set; }
-        public byte SaleStatus { get; private set; }
-        public DateTimeOffset ValidityStartDate { get; private set; }
-        public DateTimeOffset ValidityEndDate { get; private set; }
-        public byte ValidityStatus { get; private set; }
+        public ushort ProductCode { get; set; }
+        public byte Child { get; set; }
+        public byte LanguageCode { get; set; }
+        public byte ValidityLengthType { get; set; }
+        public byte ValidityLength { get; set; }
+        public byte ValidityAreaType { get; set; }
+        public byte ValidityArea { get; set; }
+        public DateTimeOffset SaleDate { get; set; }
+        public byte SaleTime { get; set; }
+        public byte GroupSize { get; set; }
+        public byte SaleStatus { get; set; }
+        public DateTimeOffset ValidityStartDate { get; set; }
+        public DateTimeOffset ValidityEndDate { get; set; }
+        public byte ValidityStatus { get; set; }
 
         //Last boarding info
-        public DateTimeOffset BoardingDate { get; private set; }
-        public ushort BoardingVehicle { get; private set; }
-        public byte BoardingLocationNumType { get; private set; }
-        public ushort BoardingLocationNum { get; private set; }
-        public byte BoardingDirection { get; private set; }
-        public byte BoardingArea { get; private set; }
+        public DateTimeOffset BoardingDate { get; set; }
+        public ushort BoardingVehicle { get; set; }
+        public byte BoardingLocationNumType { get; set; }
+        public ushort BoardingLocationNum { get; set; }
+        public byte BoardingDirection { get; set; }
+        public byte BoardingArea { get; set; }
 
         /// <summary>
         /// This constructor mostly exists as a convenience method for 

@@ -7,10 +7,12 @@ namespace HslTravelSharp.Core.Models
     /// A friendly representation of the values contained on a travel card.
     /// A travel card can contain two "period" (aka season pass) products:
     /// Period1, and Period2. Usually, they are the two most-recently purchased products.
+    /// Note: For serialization, use the RawValues property, and reconstruct the Travel
+    /// Card on the other side using the constructor that takes a RawTravelCard.
     /// </summary>
     public class TravelCard
-    {        
-        public RawTravelCard RawValues { get; private set; }
+    {
+        public RawTravelCard RawValues { get; private set; } = new RawTravelCard();
         
         public string CardNumber => RawValues.ApplicationInstanceId;
 
@@ -69,25 +71,15 @@ namespace HslTravelSharp.Core.Models
         /// <summary>
         /// The currently (or most recently) active value ticket on the card.
         /// </summary>
-        public ETicket ValueTicket => RawValues.FriendlyTicket;
-
-        /// <summary>
-        /// This constructor mostly exists as a convenience method for 
-        /// serializers like Json.NET. Using it directly
-        /// is not recommended.
-        /// </summary>
-        public TravelCard()
-        {
-
-        }
+        public ETicket ValueTicket => RawValues.FriendlyTicket;        
 
         /// <summary>
         /// Creates a friendly Travel Card given a <see cref="RawTravelCard"/> object.
         /// </summary>
         /// <param name="rawCard"></param>
-        public TravelCard(RawTravelCard rawCard)
+        public TravelCard(RawTravelCard rawValues)
         {
-            RawValues = rawCard;
+            RawValues = rawValues;
 
             var valid1Type = (ValidityAreaType)RawValues.ValidityAreaType1;
             ValidityArea1 = valid1Type == ValidityAreaType.Zone

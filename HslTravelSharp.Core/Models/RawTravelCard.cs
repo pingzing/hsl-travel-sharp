@@ -19,61 +19,61 @@ namespace HslTravelSharp.Core.Models
         internal const int HistoryMaxLength = 96;
 
         //Member variables for data extracted from ApplicationInformation file
-        public byte ApplicationVersion { get; private set; }
-        public String ApplicationInstanceId { get; private set; }
-        public byte PlatformType { get; private set; }        
+        public byte ApplicationVersion { get; set; }
+        public String ApplicationInstanceId { get; set; }
+        public byte PlatformType { get; set; }        
 
         //Member variables for data extracted from PeriodPass file
 
         //First period product
-        public ushort ProductCode1 { get; private set; }
-        public byte ValidityAreaType1 { get; private set; }
-        public byte ValidityArea1 { get; private set; }
-        public DateTimeOffset PeriodStartDate1 { get; private set; }
-        public DateTimeOffset PeriodEndDate1 { get; private set; }
-        public ushort PeriodLength1 { get; private set; }                        
+        public ushort ProductCode1 { get; set; }
+        public byte ValidityAreaType1 { get; set; }
+        public byte ValidityArea1 { get; set; }
+        public DateTimeOffset PeriodStartDate1 { get; set; }
+        public DateTimeOffset PeriodEndDate1 { get; set; }
+        public ushort PeriodLength1 { get; set; }                        
 
         //Second period product
-        public ushort ProductCode2 { get; private set; }
-        public byte ValidityAreaType2 { get; private set; }
-        public byte ValidityArea2 { get; private set; }       
-        public DateTimeOffset PeriodStartDate2 { get; private set; }
-        public DateTimeOffset PeriodEndDate2 { get; private set; }
-        public ushort PeriodLength2 { get; private set; }                       
+        public ushort ProductCode2 { get; set; }
+        public byte ValidityAreaType2 { get; set; }
+        public byte ValidityArea2 { get; set; }       
+        public DateTimeOffset PeriodStartDate2 { get; set; }
+        public DateTimeOffset PeriodEndDate2 { get; set; }
+        public ushort PeriodLength2 { get; set; }                       
 
         //Season pass info     
-        public ushort LoadedPeriodProduct { get; private set; }        
-        public DateTimeOffset PeriodLoadingDate { get; private set; }        
-        public ushort LoadedPeriodLength { get; private set; }        
-        public uint LoadedPeriodPrice { get; private set; }        
-        public ushort PeriodLoadingOrganisation { get; private set; }        
-        public ushort PeriodLoadingDeviceNumber { get; private set; }
+        public ushort LoadedPeriodProduct { get; set; }        
+        public DateTimeOffset PeriodLoadingDate { get; set; }        
+        public ushort LoadedPeriodLength { get; set; }        
+        public uint LoadedPeriodPrice { get; set; }        
+        public ushort PeriodLoadingOrganisation { get; set; }        
+        public ushort PeriodLoadingDeviceNumber { get; set; }
 
         //Season pass last boarding info        
-        public DateTimeOffset BoardingDate { get; private set; }        
-        public ushort BoardingVehicle { get; private set; }        
-        public byte BoardingLocationNumType { get; private set; }        
-        public ushort BoardingLocationNum { get; private set; }        
-        public byte BoardingDirection { get; private set; }        
-        public byte BoardingArea { get; private set; }        
+        public DateTimeOffset BoardingDate { get; set; }        
+        public ushort BoardingVehicle { get; set; }        
+        public byte BoardingLocationNumType { get; set; }        
+        public ushort BoardingLocationNum { get; set; }        
+        public byte BoardingDirection { get; set; }        
+        public byte BoardingArea { get; set; }        
 
         //Stored value (i.e. money) info      
-        public uint ValueCounter { get; private set; }        
-        public DateTimeOffset LoadingDate { get; private set; }        
-        public byte LoadingTime { get; private set; }        
-        public uint LoadedValue { get; private set; }        
-        public ushort LoadingOrganisationID { get; private set; }        
-        public ushort LoadingDeviceNumber { get; private set; }
+        public uint ValueCounter { get; set; }        
+        public DateTimeOffset LoadingDate { get; set; }        
+        public byte LoadingTime { get; set; }        
+        public uint LoadedValue { get; set; }        
+        public ushort LoadingOrganisationID { get; set; }        
+        public ushort LoadingDeviceNumber { get; set; }
 
         //Member variables for data extracted from History file        
-        public History[] HistoryFields { get; private set; } = new History[8];        
-        public byte HistoryIndex { get; private set; }
+        public History[] HistoryFields { get; set; } = new History[8];        
+        public byte HistoryIndex { get; set; }
 
         //Member variable for error status of the travel card        
-        public CardStatus Status { get; private set; } = 0;
+        public CardStatus Status { get; set; } = 0;
        
-        public ETicket FriendlyTicket { get; private set; }
-        public RawETicket RawTicket { get; private set; }
+        public ETicket FriendlyTicket { get; set; }
+        public RawETicket RawTicket { get; set; }
 
         /// <summary>
         /// This constructor mostly exists as a convenience method for 
