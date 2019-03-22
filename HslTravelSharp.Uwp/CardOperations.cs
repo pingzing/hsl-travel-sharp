@@ -13,6 +13,16 @@ namespace HslTravelSharpUwp
     /// </summary>
     public class CardOperations
     {        
+        public static async Task<byte[]> GetVersionAsync(SmartCard card)
+        {
+            using (SmartCardConnection connection = await card.ConnectAsync())
+            {
+                // The last two bytes might contain the MORE_DATA response, so we should fix this up to check for that,
+                // and send the ReadNext command, if so.
+                return (await connection.TransmitAsync(HslCommands.GetVersionCommand.AsBuffer())).ToArray();
+            }
+        }
+
         /// <summary>
         /// Reads the travel card data from HSL Mifare DESFire card.
         /// </summary>

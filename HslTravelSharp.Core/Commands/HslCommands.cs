@@ -8,6 +8,11 @@
         // Commands
 
         /// <summary>
+        /// DESFire GetVersion command.
+        /// </summary>
+        public static readonly byte[] GetVersionCommand = { 0x90, 0x60, 0x00, 0x00, 0x00 };
+
+        /// <summary>
         /// DESFire Select Application command for selecting the HSL application on the card.
         /// Returns <see cref="OkResponse"/> on success.
         /// </summary>
@@ -47,7 +52,12 @@
         /// <summary>
         /// DESFire OPERATION_OK response.
         /// </summary>
-        public static readonly byte[] OkResponse = { 0x91, 0x00 };
+        public static readonly byte[] OkResponse = { 0x91, 0xA0 };
+
+        /// <summary>
+        /// DESFire error response. Not sure what it's known as internally.
+        /// </summary>
+        public static readonly byte[] ErrorResponse = { 0x91, 0x9D };
 
         /// <summary>
         /// DESFire ADDTIONAL_FRAME response. Indicates that more data is expected to be sent.
