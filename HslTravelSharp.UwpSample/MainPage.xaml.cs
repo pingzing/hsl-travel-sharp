@@ -49,8 +49,8 @@ namespace HslTravelSharp.UwpSample
         private async void Reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
         {
             // Obtain your travel card here
-            byte[] atrResponse = (await args.SmartCard.GetAnswerToResetAsync()).ToArray();
-            byte[] versionResponse = (await CardOperations.GetVersionAsync(args.SmartCard)).ToArray();
+
+            var card = await CardOperations.ReadTravelCardAsync(args.SmartCard);
 
             // Update your UI, etc
         }

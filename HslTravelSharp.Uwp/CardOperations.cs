@@ -1,6 +1,8 @@
 ﻿using HslTravelSharp.Core.Commands;
+using HslTravelSharp.Core.Helpers;
 using HslTravelSharp.Core.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
@@ -19,7 +21,36 @@ namespace HslTravelSharpUwp
             {
                 // The last two bytes might contain the MORE_DATA response, so we should fix this up to check for that,
                 // and send the ReadNext command, if so.
-                return (await connection.TransmitAsync(HslCommands.GetVersionCommand.AsBuffer())).ToArray();
+
+                List<byte> versionBytes = new List<byte>();
+                byte[] versionResponse = (await connection.TransmitAsync(HslCommands.GetVersionCommand.AsBuffer())).ToArray();
+                if (versionResponse.HasMore())
+                {
+                    versionResponse = versionResponse.Take(versionResponse.Length - 2).ToArray(); // Remove final two MORE_DATA bytes                    
+                    byte[] moreResponse;
+                    do
+                    {
+                        moreResponse = (await connection.TransmitAsync(HslCommands.ReadNextCommand.AsBuffer())).ToArray();
+                        if (moreResponse.HasMore())
+                        {
+                            versionBytes.AddRange(moreResponse.Take(moreResponse.Length - 2)); // Remove final two MORE_DATA bytes
+                        }
+                        else
+                        {
+                            versionBytes.AddRange(moreResponse);
+                        }
+                    } while (moreResponse.HasMore());
+                }
+                return versionResponse.Concat(versionBytes).ToArray();
+            }
+        }
+
+        public static async Task<List<byte[]>> GetApplicationsAsync(SmartCard card)
+        {
+            using (SmartCardConnection connection = await card.ConnectAsync())
+            {
+                byte[] applicationsResponse = (await connection.TransmitAsync(HslCommands.GetApplicationIDsCommand.AsBuffer())).ToArray();
+                return new List<byte[]> { applicationsResponse };
             }
         }
 
